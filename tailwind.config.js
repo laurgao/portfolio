@@ -9,8 +9,8 @@ module.exports = {
             padding: "1rem",
         },
         extend: {
-            colors: {    
-                primary: "#30ecfe"
+            colors: {
+                "primary": "#30ecfe",
             },
         }  
     },
