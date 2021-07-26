@@ -4,9 +4,12 @@ import { FaTwitter, FaYoutube } from "react-icons/fa";
 import Button from "../components/Button";
 import HandwrittenButton from "../components/HandwrittenButton";
 import SEO from "../components/SEO";
+import Particles from "react-particles-js";
+import useWindowDimensions from "../utils/window";
 
 
 export default function Home() {
+    const { height, width } = useWindowDimensions();
     const [error, setError] = useState<any>(null);
     const [invalidEmail, setInvalidEmail] = useState<boolean>(false);
     const [email, setEmail] = useState<string>("");
@@ -39,19 +42,21 @@ export default function Home() {
             </div>
         <video 
             autoPlay 
-            loop className="fixed md:absolute opacity-40 right-0 bottom-0 m-0 " 
+            loop 
+            muted
+            className="fixed md:absolute opacity-40 right-0 bottom-0 m-0 " 
             style={{minWidth: "100vh", minHeight: "100vh", maxWidth: "none", top: "50%", left: "50%", transform: "translate(-50%, -50%)"}}
         >
             <source src="/hero.mp4" type="video/mp4"/>
             Your browser does not support the HTML video tag.
         </video>
         <div className="flex items-center w-screen h-screen relative z-30" >
-            <div className="absolute h-full inset-0">
-                {/* <Particles
+            <div className="absolute inset-0 opacity-50">
+                {width > 768 && <Particles
                     params={{
                         "particles": {
                             "number": {
-                                "value": 75
+                                "value": width / 20
                             },
                             "size": {
                                 "value": 3
@@ -66,7 +71,7 @@ export default function Home() {
                             }
                         }
                     }} 
-                /> */}
+                />}
             </div>
             
             <div className="max-w-4-xl text-center mx-auto w-full ">
@@ -96,7 +101,7 @@ export default function Home() {
         <div className="opacity-50 z-50 absolute bottom-4 flex md:flex-row flex-col w-full">
             <div className="md:mr-auto md:text-left md:ml-8 md:max-w-sm md:absolute md:bottom-0 hidden md:block">
                 <div className="flex gap-10 justify-center mb-10">
-                    <a className="transition primary" href="https://www.youtube.com/channel/UCstSEHcCLMGdac9wkbMeAIw" target="_blank" rel="noreferrer"><FaYoutube size={iconSize}/></a>
+                    <a className="transition hover:primary" href="https://www.youtube.com/channel/UCstSEHcCLMGdac9wkbMeAIw" target="_blank" rel="noreferrer"><FaYoutube size={iconSize}/></a>
                     <a className="transition hover:primary" href="https://twitter.com/laurgao" target="_blank" rel="noreferrer"><FaTwitter size={iconSize}/></a>
                     <a className="transition hover:primary" href="https://postulate.us/@laura" target="_blank" rel="noreferrer"><img src="/postulate-white.png" alt="Postulate logo" width={iconSize}/></a>
                     <a className="transition hover:primary text-xl" href="https://tks.life/profile/laura.gao#portfolio" target="_blank" rel="noreferrer">Portfolio</a>
