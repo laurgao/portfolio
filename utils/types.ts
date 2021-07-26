@@ -15,6 +15,10 @@ export interface SessionObj {
     username: string,
 }
 
+export interface NewsletterObj {
+    email: string; 
+}
+
 // generic / type alias from https://stackoverflow.com/questions/26652179/extending-interface-with-generic-in-typescript
 export type DatedObj<T extends {}> = T & {
     _id: string,

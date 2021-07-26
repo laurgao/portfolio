@@ -1,25 +1,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.handwritten {
+  font-family: "Rock Salt";
+}
+
+.bg-scribble-hover:hover {
+  background-image: url("/scribble.png");
+  background-size: contain;
+}
 
 .spinner {
-    position: absolute;
-    top: calc(50% - 0.5rem);
-    left: calc(50% - 0.5rem);
-    width: 1rem;
-    height: 1rem;
-    border-radius: 50%;
-    border: 0.2rem solid rgba(255, 255, 255, 0.3);
-    border-top-color: white;
-    animation: up-spin 1s linear infinite;
+  position: absolute;
+  top: calc(50% - 0.5rem);
+  left: calc(50% - 0.5rem);
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 0.2rem solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  animation: up-spin 1s linear infinite;
 }
 
 .up-spinner.dark {
-    border-color: rgba(0,0,0,0.3);
-    border-top-color: black;
+  border-color: rgba(0, 0, 0, 0.3);
+  border-top-color: black;
 }
 
 @keyframes up-spin {
-    0% { transform: rotate(0deg); }
-    100% {transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
