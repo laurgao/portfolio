@@ -2,7 +2,7 @@ import {NextSeo} from "next-seo";
 import {useRouter} from "next/router";
 
 export default function SEO({
-    title = "Laura Gao",
+    title = "Laura Gao: Developer and content creator",
     description = "Quantum software intern @ Zapata and aspiring content creator :p",
     imgUrl = null,
     authorUsername = null,
@@ -10,7 +10,7 @@ export default function SEO({
     noindex = false,
 }: { title?: string, description?: string, imgUrl?: string, authorUsername?: string, publishedDate?: string, noindex?: boolean }) {
     const router = useRouter();
-    const fullTitle = title + (router.asPath === "/" ? "" : "| Laura Gao");
+    const fullTitle = title + (router.asPath === "/" ? "" : "| Laura Gao: Developer and content creator");
 
     let openGraph = {
         title: fullTitle,

@@ -12,6 +12,10 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+.primary {
+  color: "#30ecfe";
+}
+
 .handwritten {
   font-family: "Rock Salt";
 }

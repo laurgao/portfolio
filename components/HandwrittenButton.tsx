@@ -13,14 +13,14 @@ const HandwrittenButton = ({ children, href, disabled} : {
     // hover:bg-white border hover:border-transparent border-white  
     return (
         <div 
-            className = "opacity-70 hover:text-black mb-3" 
+            className = "opacity-70 hover:text-black mb-2" 
             onMouseEnter={() => setIsShown(true)}
             onMouseLeave={() => setIsShown(false)}
         >
             <Button 
                 href={href} 
                 disabled={disabled}
-                className="z-30 opacity-70 -my-6 py-6 bg-scribble-hover"
+                className="z-30 opacity-70 -my-5 py-5 bg-scribble-hover"
             >
                 <>
                 <p className="text-2xl mr-2">{children}</p> 

@@ -4,7 +4,6 @@ import { FaTwitter, FaYoutube } from "react-icons/fa";
 import Button from "../components/Button";
 import HandwrittenButton from "../components/HandwrittenButton";
 import SEO from "../components/SEO";
-import Particles from "react-particles-js";
 
 
 export default function Home() {
@@ -30,13 +29,21 @@ export default function Home() {
     return (
     <div className="bg-black overflow-hidden text-white w-screen h-screen inset-0 absolute">
         <SEO />
+        <div className="absolute w-full mx-auto top-10 md:hidden">
+                <div className="flex gap-10 justify-center mb-10">
+                    <a className="transition primary" href="https://www.youtube.com/channel/UCstSEHcCLMGdac9wkbMeAIw" target="_blank" rel="noreferrer"><FaYoutube size={iconSize}/></a>
+                    <a className="transition hover:primary" href="https://twitter.com/laurgao" target="_blank" rel="noreferrer"><FaTwitter size={iconSize}/></a>
+                    <a className="transition hover:primary" href="https://postulate.us/@laura" target="_blank" rel="noreferrer"><img src="/postulate-white.png" alt="Postulate logo" width={iconSize}/></a>
+                    <a className="transition hover:primary text-xl" href="https://tks.life/profile/laura.gao#portfolio" target="_blank" rel="noreferrer">Portfolio</a>
+                </div>
+            </div>
         <video 
             autoPlay 
-            loop className="fixed md:absolute opacity-50 right-0 bottom-0 m-0 " 
+            loop className="fixed md:absolute opacity-40 right-0 bottom-0 m-0 " 
             style={{minWidth: "100vh", minHeight: "100vh", maxWidth: "none", top: "50%", left: "50%", transform: "translate(-50%, -50%)"}}
         >
             <source src="/hero.mp4" type="video/mp4"/>
-            Your browser does not support the video tag.
+            Your browser does not support the HTML video tag.
         </video>
         <div className="flex items-center w-screen h-screen relative z-30" >
             <div className="absolute h-full inset-0">
@@ -63,8 +70,10 @@ export default function Home() {
             </div>
             
             <div className="max-w-4-xl text-center mx-auto w-full ">
-                <p className="text-2xl opacity-50 inline mb-6" style={{transform: "rotate(-2.4deg)"}}>Now: quantum software intern @ Zapata Computing + aspiring content creator</p>
-                <p className="text-8xl opacity-70 px-10 mb-6" style={{transform: "rotate(-2.4deg)"}}>Laura Gao</p>
+                <p 
+                    className="text-8xl opacity-70 hover:opacity-90 transition px-10 md:mb-6 mb-10" 
+                    style={{transform: "rotate(-2.4deg)"}}
+                >Laura Gao</p>
 
                 <div className="max-w-sm mx-auto mt-6">
                     <div className="mx-4 ">
@@ -76,26 +85,30 @@ export default function Home() {
                     <HandwrittenButton href="https://maxcut.vercel.app">Quantum software dev</HandwrittenButton>
                     </div>
                 </div>
+                <p 
+                    className="text-xl opacity-40 hover:opacity-50 transition mb-6 overflow-break" 
+                    style={{transform: "rotate(-4deg) translate(70px, 30px)"}}
+                >Current pursuit: I'm spending my summer as a <br/>Quantum software intern @ Zapata Computing</p>
             </div>
         </div>
 
         {/* Stuff at the bottom */}
         <div className="opacity-50 z-50 absolute bottom-4 flex md:flex-row flex-col w-full">
-            <div className="md:mr-auto md:text-left md:ml-8 md:max-w-sm md:absolute md:bottom-0">
+            <div className="md:mr-auto md:text-left md:ml-8 md:max-w-sm md:absolute md:bottom-0 hidden md:block">
                 <div className="flex gap-10 justify-center mb-10">
-                    <a className="transition hover:primary" href="https://www.youtube.com/channel/UCstSEHcCLMGdac9wkbMeAIw" target="_blank" rel="noreferrer"><FaYoutube size={iconSize}/></a>
+                    <a className="transition primary" href="https://www.youtube.com/channel/UCstSEHcCLMGdac9wkbMeAIw" target="_blank" rel="noreferrer"><FaYoutube size={iconSize}/></a>
                     <a className="transition hover:primary" href="https://twitter.com/laurgao" target="_blank" rel="noreferrer"><FaTwitter size={iconSize}/></a>
                     <a className="transition hover:primary" href="https://postulate.us/@laura" target="_blank" rel="noreferrer"><img src="/postulate-white.png" alt="Postulate logo" width={iconSize}/></a>
                     <a className="transition hover:primary text-xl" href="https://tks.life/profile/laura.gao#portfolio" target="_blank" rel="noreferrer">Portfolio</a>
                 </div>
             </div>
             <div className="md:mr-8 md:ml-auto mx-auto md:text-right md:max-w-sm text-lg">
-            <h2 className="flex-shrink-0 mb-4 md:mb-0"><b>Sign up for my monthly email list.</b><br/><p className="">Or, you can <a className="underline transition theme-hover" href="/news#newsletter">read it first.</a></p><br/></h2>
+            <h2 className="flex-shrink-0 mb-4 md:mb-6"><b>Sign up for my monthly email list.</b><br/><p className="">Or, you can <a className="underline transition hover:primary" href="https://the-chive.vercel.app/news#newsletter">read it first.</a></p></h2>
                 {submitted ? (
                     <div className="ml-auto">
                         <p>
                             You have successfully subscribed {submitted.email}. Thank you for signing up 😁<br/>
-                            Check out past issues <a className="underline transition theme-hover" href="/news#newsletter">here</a>.
+                            Check out past issues <a className="underline transition hover:primary" href="/news#newsletter">here</a>.
                         </p>
                     </div>
                 ) : (
@@ -116,9 +129,7 @@ export default function Home() {
                     </div>
                 )}
             </div>
-
         </div>
-
     </div>
     )
 }
