@@ -87,7 +87,7 @@ export default function Home() {
                     <div className="ml-auto">
                         <p>
                             You have successfully subscribed {submitted.email}. Thank you for signing up 😁<br/>
-                            Check out past issues <a className="underline transition hover:primary" href="/news#newsletter">here</a>.
+                            Check out past issues <a className="underline transition hover:primary" href="https://the-chive.vercel.app/news#newsletter">here</a>.
                         </p>
                     </div>
                 ) : (
