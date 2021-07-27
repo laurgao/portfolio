@@ -4,12 +4,9 @@ import { FaTwitter, FaYoutube } from "react-icons/fa";
 import Button from "../components/Button";
 import HandwrittenButton from "../components/HandwrittenButton";
 import SEO from "../components/SEO";
-import Particles from "react-particles-js";
-import useWindowDimensions from "../utils/window";
 
 
 export default function Home() {
-    const { height, width } = useWindowDimensions();
     const [error, setError] = useState<any>(null);
     const [invalidEmail, setInvalidEmail] = useState<boolean>(false);
     const [email, setEmail] = useState<string>("");
@@ -33,13 +30,13 @@ export default function Home() {
     <div className="bg-black overflow-hidden text-white w-screen h-screen inset-0 absolute">
         <SEO />
         <div className="absolute w-full mx-auto top-10 md:hidden">
-                <div className="flex gap-10 justify-center mb-10">
-                    <a className="transition primary" href="https://www.youtube.com/channel/UCstSEHcCLMGdac9wkbMeAIw" target="_blank" rel="noreferrer"><FaYoutube size={iconSize}/></a>
-                    <a className="transition hover:primary" href="https://twitter.com/laurgao" target="_blank" rel="noreferrer"><FaTwitter size={iconSize}/></a>
-                    <a className="transition hover:primary" href="https://postulate.us/@laura" target="_blank" rel="noreferrer"><img src="/postulate-white.png" alt="Postulate logo" width={iconSize}/></a>
-                    <a className="transition hover:primary text-xl" href="https://tks.life/profile/laura.gao#portfolio" target="_blank" rel="noreferrer">Portfolio</a>
-                </div>
+            <div className="flex gap-10 justify-center mb-10">
+                <a className="transition primary" href="https://www.youtube.com/channel/UCstSEHcCLMGdac9wkbMeAIw" target="_blank" rel="noreferrer"><FaYoutube size={iconSize}/></a>
+                <a className="transition hover:primary" href="https://twitter.com/laurgao" target="_blank" rel="noreferrer"><FaTwitter size={iconSize}/></a>
+                <a className="transition hover:primary" href="https://postulate.us/@laura" target="_blank" rel="noreferrer"><img src="/postulate-white.png" alt="Postulate logo" width={iconSize}/></a>
+                <a className="transition hover:primary text-xl" href="https://tks.life/profile/laura.gao#portfolio" target="_blank" rel="noreferrer">Portfolio</a>
             </div>
+        </div>
         <video 
             autoPlay 
             loop 
@@ -51,29 +48,6 @@ export default function Home() {
             Your browser does not support the HTML video tag.
         </video>
         <div className="flex items-center w-screen h-screen relative z-30" >
-            <div className="absolute inset-0 opacity-50">
-                {width > 768 && <Particles
-                    params={{
-                        "particles": {
-                            "number": {
-                                "value": width / 20
-                            },
-                            "size": {
-                                "value": 3
-                            }
-                        },
-                        "interactivity": {
-                            "events": {
-                                "onhover": {
-                                    "enable": true,
-                                    "mode": "repulse"
-                                }
-                            }
-                        }
-                    }} 
-                />}
-            </div>
-            
             <div className="max-w-4-xl text-center mx-auto w-full ">
                 <p 
                     className="text-8xl opacity-70 hover:opacity-90 transition px-10 md:mb-6 mb-10" 
@@ -113,7 +87,7 @@ export default function Home() {
                     <div className="ml-auto">
                         <p>
                             You have successfully subscribed {submitted.email}. Thank you for signing up 😁<br/>
-                            Check out past issues <a className="underline transition hover:primary" href="/news#newsletter">here</a>.
+                            Check out past issues <a className="underline transition hover:primary" href="https://the-chive.vercel.app/news#newsletter">here</a>.
                         </p>
                     </div>
                 ) : (
