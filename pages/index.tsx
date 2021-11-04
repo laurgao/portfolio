@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
-import { FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaGithub, FaYoutube } from "react-icons/fa";
 import Button from "../components/Button";
 import HandwrittenButton from "../components/HandwrittenButton";
 import SEO from "../components/SEO";
@@ -31,8 +31,8 @@ export default function Home() {
         <SEO />
         <div className="absolute w-full mx-auto top-10 md:hidden">
             <div className="flex gap-10 justify-center mb-10">
-                <a className="transition primary" href="https://www.youtube.com/channel/UCstSEHcCLMGdac9wkbMeAIw" target="_blank" rel="noreferrer"><FaYoutube size={iconSize}/></a>
-                <a className="transition hover:primary" href="https://twitter.com/laurgao" target="_blank" rel="noreferrer"><FaTwitter size={iconSize}/></a>
+                <a className="transition hover:primary" href="https://www.youtube.com/channel/UCstSEHcCLMGdac9wkbMeAIw" target="_blank" rel="noreferrer"><FaYoutube size={iconSize}/></a>
+                <a className="transition hover:primary" href="https://github.com/laurgao" target="_blank" rel="noreferrer"><FaGithub size={iconSize}/></a>
                 <a className="transition hover:primary" href="https://postulate.us/@laura" target="_blank" rel="noreferrer"><img src="/postulate-white.png" alt="Postulate logo" width={iconSize}/></a>
                 <a className="transition hover:primary text-xl" href="https://tks.life/profile/laura.gao#portfolio" target="_blank" rel="noreferrer">Portfolio</a>
             </div>
@@ -59,9 +59,8 @@ export default function Home() {
 
                     <HandwrittenButton href="https://mailchi.mp/5836b3e01570/3-hackathons-in-3-weeks">Artist</HandwrittenButton>
                     <HandwrittenButton href="https://postulate.us/@laura/p/2021-05-03-You-Don't-Want-to-Know-wneKCviGChNBxEtE6r4kkK">Writer</HandwrittenButton>
+                    <HandwrittenButton href="https://scratchie.vercel.app/">Web dev</HandwrittenButton>
                     <HandwrittenButton href="https://www.youtube.com/watch?v=lokttAz2Ejo">Video creator</HandwrittenButton>
-                    <HandwrittenButton href="https://aeropure.ca">Web designer</HandwrittenButton>
-                    <HandwrittenButton href="https://maxcut.vercel.app">Quantum software dev</HandwrittenButton>
                     </div>
                 </div>
                 <p 
@@ -76,7 +75,7 @@ export default function Home() {
             <div className="md:mr-auto md:text-left md:ml-8 md:max-w-sm md:absolute md:bottom-0 hidden md:block">
                 <div className="flex gap-10 justify-center mb-10">
                     <a className="transition hover:primary" href="https://www.youtube.com/channel/UCstSEHcCLMGdac9wkbMeAIw" target="_blank" rel="noreferrer"><FaYoutube size={iconSize}/></a>
-                    <a className="transition hover:primary" href="https://twitter.com/laurgao" target="_blank" rel="noreferrer"><FaTwitter size={iconSize}/></a>
+                    <a className="transition hover:primary" href="https://github.com/laurgao" target="_blank" rel="noreferrer"><FaGithub size={iconSize}/></a>
                     <a className="transition hover:primary" href="https://postulate.us/@laura" target="_blank" rel="noreferrer"><img src="/postulate-white.png" alt="Postulate logo" width={iconSize}/></a>
                     <a className="transition hover:primary text-xl" href="https://tks.life/profile/laura.gao#portfolio" target="_blank" rel="noreferrer">Portfolio</a>
                 </div>
