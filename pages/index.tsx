@@ -29,7 +29,7 @@ export default function Home() {
     return (
     <div className="bg-black overflow-hidden text-white w-screen h-screen inset-0 absolute">
         <SEO />
-        <div className="absolute w-full mx-auto top-10 md:hidden">
+        <div className="absolute w-full mx-auto top-10 md:hidden z-40 opacity-50">
             <div className="flex gap-10 justify-center mb-10">
                 <a className="transition hover:primary" href="https://www.youtube.com/channel/UCstSEHcCLMGdac9wkbMeAIw" target="_blank" rel="noreferrer"><FaYoutube size={iconSize}/></a>
                 <a className="transition hover:primary" href="https://github.com/laurgao" target="_blank" rel="noreferrer"><FaGithub size={iconSize}/></a>
